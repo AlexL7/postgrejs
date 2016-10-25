@@ -10,9 +10,9 @@ const client = new pg.Client({
   ssl      : settings.ssl
 });
 
-var name = process.argv[2];
+const name = process.argv[2];
 
-    let query = `SELECT * FROM famous_people
+let query = `SELECT * FROM famous_people
                   WHERE first_name = '${name}' OR last_name = '${name}'`;
                 //WHERE first_name = '${name};'
 
